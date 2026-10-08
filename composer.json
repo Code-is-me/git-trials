@@ -1,0 +1,34 @@
+{
+    "name": "nexusbrew/coffee-shop",
+    "description": "NexusBrew Coffee Shop - DevSecOps Demo Application",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "NexusBrew Dev Team",
+            "email": "admin@nexusbrew.local"
+        }
+    ],
+    "require": {
+        "php": ">=8.0",
+
+        "_comment_vulnerability": "VULNERABILITY #6: Intentionally Outdated Dependency",
+        "_comment_cwe": "CWE-1104: Use of Unmaintained Third-Party Components",
+        "_comment_tool": "Detected by: Trivy (SCA - Software Composition Analysis)",
+        "_comment_severity": "HIGH",
+        "_comment_description": "PHPMailer 5.2.0 (released 2015) contains multiple known CVEs including: CVE-2016-10033 (Remote Code Execution), CVE-2016-10045 (RCE bypass). Trivy will flag this as a vulnerable dependency during the CI/CD pipeline scan.",
+
+        "phpmailer/phpmailer": "5.2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "NexusBrew\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
