@@ -1,7 +1,7 @@
 <?php
 /**
  * NexusBrew - Login Page
- *
+ * aiodjadjoaidwjoiawjd
  * ┌──────────────────────────────────────────────────────────────┐
  * │ INTENTIONAL VULNERABILITY #1: Hard-coded Credentials        │
  * │ CWE-798 | Detected by: Gitleaks                             │
