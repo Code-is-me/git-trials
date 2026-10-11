@@ -1,27 +1,5 @@
 <?php
-/**
- * NexusBrew - Login Page
- * aiodjadjoaidwjoiawjd
- * adapowdjpowjdopawdwpaowdpowjdpowj
- * adawpodjwpodjpawdpawddwapodjawp
- * aw;dawodopawdopawdpawdpoawdpoawjd
- * ┌──────────────────────────────────────────────────────────────┐
- * │ INTENTIONAL VULNERABILITY #1: Hard-coded Credentials        │
- * │ CWE-798 | Detected by: Gitleaks                             │
- * │                                                              │
- * │ The credentials below are intentionally hard-coded in the   │
- * │ PHP source file so that Gitleaks (secret scanner) can       │
- * │ detect them during the CI/CD pipeline scan.                  │
- * │                                                              │
- * │ Email    : admin@nexusbrew.local                            │
- * │ Password : Admin123!                                         │
- * └──────────────────────────────────────────────────────────────┘
- *
- * Additional vulnerabilities on this page:
- * - No CSRF token on login form (CWE-352)
- * - No rate limiting / brute-force protection
- * - No session regeneration after login
- */
+
 
 session_start();
 
@@ -65,11 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $inputEmail    = $_POST['email']    ?? '';
     $inputPassword = $_POST['password'] ?? '';
 
-    // ══════════════════════════════════════════════════════════
-    // VULNERABILITY: Hard-coded credential comparison
-    // CWE-798: Use of Hard-coded Credentials
-    // Tool: Gitleaks
-    //
+  
     // Gitleaks pattern that will trigger:
     //   - email:    admin@nexusbrew.local
     //   - password: Admin123!
